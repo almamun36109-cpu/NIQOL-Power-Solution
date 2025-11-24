@@ -560,7 +560,7 @@
             chatInput.value = '';
             chatSendBtn.disabled = true;
             
-            createLoadingIndicator('উত্তর তৈরি হচ্ছে (দ্রুত)...'); // Stage 1 Loading: Text generation
+            createLoadingIndicator('অনুগ্রহ পূর্বক অপেক্ষা করুন...'); // Stage 1 Loading: Text generation
 
             let textResponse = '';
             let imageSourceUrl = null;
@@ -653,7 +653,7 @@
                     
                     if (!imageSourceUrl) {
                         console.error("Image generation failed. Continuing with text only.");
-                        textResponse += '<br><br><b>[দ্রষ্টব্য: ডায়াগ্রাম তৈরির চেষ্টা ব্যর্থ হয়েছে। শুধুমাত্র টেক্সট উত্তর দেওয়া হলো।]</b>';
+                        textResponse += '<br><br><b>[শুধুমাত্র টেক্সট উত্তর দেওয়া হলো।]</b>';
                     }
                 } else {
                     console.log("Image generation skipped as the query did not require a visual aid.");
@@ -686,7 +686,7 @@
                 // --- CRITICAL ERROR HANDLING: UI Cleanup and User Feedback ---
                 
                 // Display user-friendly error message
-                addMessageToChat('দুঃখিত, নেটওয়ার্ক বা সার্ভার ত্রুটির কারণে উত্তর তৈরি করা যায়নি। অনুগ্রহ করে আপনার সংযোগ পরীক্ষা করে আবার চেষ্টা করুন। (E2) [স্থায়িত্ব উন্নত করা হয়েছে, এই ত্রুটি অব্যাহত থাকলে অনুগ্রহ করে তা জানান।]', 'ai');
+                addMessageToChat('দুঃখিত,অনুগ্রহ করে আপনার সংযোগ পরীক্ষা করে আবার চেষ্টা করুন। অথবা আমাদের NIQOL এর হটলাইন এ সরাসরি যোগাযোগ করুন। ধন্যবাদ। ', 'ai');
                 
                 // Remove the last user query from history to allow a clean retry
                 chatHistory.pop(); 
